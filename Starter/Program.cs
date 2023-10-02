@@ -27,6 +27,8 @@ foreach (string name in studentNames)
 
   int studentSum = 0;
 
+  string letterGrade = "";
+
   decimal finalScore;
 
   foreach (int score in studentScores)
@@ -36,7 +38,43 @@ foreach (string name in studentNames)
 
   finalScore = (decimal)studentSum / currentAssignments;
 
-  Console.WriteLine($"{name}:\t\t" + finalScore + "\tA-");
+  if (finalScore >= 97)
+    letterGrade = "A+";
+
+  else if (finalScore >= 93)
+    letterGrade = "A";
+
+  else if (finalScore >= 90)
+    letterGrade = "A-";
+
+  else if (finalScore >= 87)
+    letterGrade = "B+";
+
+  else if (finalScore >= 83)
+    letterGrade = "B";
+
+  else if (finalScore >= 80)
+    letterGrade = "B-";
+
+  else if (finalScore >= 77)
+    letterGrade = "C+";
+
+  else if (finalScore >= 73)
+    letterGrade = "C";
+
+  else if (finalScore >= 70)
+    letterGrade = "C-";
+
+  else if (finalScore >= 67)
+    letterGrade = "D+";
+
+  else if (finalScore >= 63)
+    letterGrade = "D";
+
+  else if (finalScore >= 60)
+    letterGrade = "D-";
+
+  Console.WriteLine($"{name}:\t\t" + finalScore + $"\t{letterGrade}");
 }
 
 Console.WriteLine("Press the Enter key to continue");
